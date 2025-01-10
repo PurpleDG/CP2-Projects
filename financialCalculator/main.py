@@ -19,7 +19,7 @@ def savingGoal():
     if weekOrMonth == 1:
         deposit = float(input("\nWhat is your weekly deposit? (whole number or decimal number)\n"))
         timeTaken = str(int(goalCost / deposit))
-        print("It will take around " + timeTaken + " weeks for you to reach your goal.")
+        print("\nIt will take around " + timeTaken + " weeks for you to reach your goal.")
         time.sleep(3)
         main()
 
@@ -27,9 +27,27 @@ def savingGoal():
     if weekOrMonth == 2:
         deposit = float(input("\nWhat is your monthly deposit? (whole number or decimal number)\n"))
         timeTaken = str(int(goalCost / deposit))
-        print("It will take around " + timeTaken + " months for you to reach your goal.")
+        print("\nIt will take around " + timeTaken + " months for you to reach your goal.")
         time.sleep(3)
         main()
+
+def compoundInterest():
+
+    deposit = input("What is your monthly deposit? (whole number or decimal number)\n")
+    try:
+        deposit = float(deposit)
+    except ValueError:
+        print("\nINVALID INPUT\n\nPlease try again.")
+        compoundInterest()
+
+    rate = input("What is the interest rate? (whole number or decimal number)\n")
+    try:
+        rate = float(rate)
+    except ValueError:
+        print("\nINVALID INPUT\n\nPlease try again.")
+        compoundInterest()
+
+    amount = deposit * ((1 + (rate / 12)) ** (12 * years))
 
 #The main function that runs the program:
 def main():
@@ -42,7 +60,7 @@ def main():
         if function == 1:
             savingGoal()
         if function == 2:
-            coumpoundInterest()
+            compoundInterest()
         if function == 3:
             budgetAllocator()
         if function == 4:
