@@ -22,7 +22,7 @@ def numLetters(options, optionsPicked, password):
          num = int(num)
     except ValueError:
          print("\nINVALID INPUT\n\nPlease try again.")
-         numLetters()
+         numLetters(options, optionsPicked, password)
 
     upperLetters(num, options, optionsPicked, password)
 
@@ -32,7 +32,8 @@ def upperLetters(num, options, optionsPicked, password):
 
     if yn.upper() == "Y":
         print("\nUppercase letters will be included in your password.")
-        options.append(upperLetters)
+        for i in upperLetters:
+            options.append(i)
         optionsPicked += 1
 
     else:
@@ -46,7 +47,8 @@ def lowerLetters(num, options, optionsPicked, password):
 
     if yn.upper() == "Y":
         print("\nLowercase letters will be included in your password.")
-        options.append(lowerLetters)
+        for i in lowerLetters:
+            options.append(i)
         optionsPicked += 1
 
     else:
@@ -60,7 +62,8 @@ def numbers(num, options, optionsPicked, password):
 
     if yn.upper() == "Y":
         print("\nNumbers will be included in your password.")
-        options.append(numbers)
+        for i in numbers:
+            options.append(i)
         optionsPicked += 1
 
     else:
@@ -74,7 +77,8 @@ def specialCharacters(num, options, optionsPicked, password):
 
     if yn.upper() == "Y":
         print("\nSpecial characters will be included in your password.")
-        options.append(specialCharacters)
+        for i in specialCharacters:
+            options.append(i)
         optionsPicked += 1
 
     else:
@@ -83,7 +87,7 @@ def specialCharacters(num, options, optionsPicked, password):
     assemble(num, options, optionsPicked, password)
 
 def assemble(num, options, optionsPicked, password):
-    
+
     if optionsPicked == 0:
         print("Your password is completely empty. You didn't pick anything! :/")
 
@@ -91,12 +95,11 @@ def assemble(num, options, optionsPicked, password):
         print("")
         for y in range(4):
             for i in range(num):
-                print(options)
-                a = random.choice(options)
+                a = str(random.choice(options))
                 password = password + a
             print(password)
             password = ""
-
+            
 def main():
     
     options = []
