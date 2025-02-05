@@ -4,16 +4,33 @@
 print("\nHello! I am the personal library manager. I can manage a list of your favorite songs.")
 
 #Create the set to carry the user's music list:
-music = {""}
+music = []
 
 #Function to add an item to the music list:
 def addItem():
 
     #Ask the user what song they want to add:
-    song = input("\nWhat song would you like to add? (song - artist)\n")
+    title = input("\nWhat is the name of the song you would like to add?\n")
+
+    #Ask the user what the artist of the song is:
+    artist = input("\nWho is the artist of the song?\n")
     
+    #Ask the user what the length of the song is:
+    length = input("\nHow long is the song? (minutes:seconds)\n")
+
+    #Ask the user what the genre of the song is:
+    genre = input("\nWhat genre is the song?\n")
+
+    #Create song
+    song = {
+        "title": title,
+        "artist": artist,
+        "length": length,
+        "genre": genre
+    }
+
     #Add the song to the music list:
-    music.add(song)
+    music.append(song)
 
     #Tell the user that the song has been added:
     print("\nSong added.")
@@ -22,7 +39,7 @@ def addItem():
 def search():
 
     #Ask the user if they want to search for a certain song, or songs by a certain artist:
-    artistOrSong = input("\nDo you want to search by artist, or title? (a = artist, t = title)\n")
+    choice = input("\nWhat would you like to search for songs by?\nt = title\na = artist\nl = length\ng = genre\n")
     
     #If the user chooses to search for a certain song:
     if artistOrSong.upper() == "T":
