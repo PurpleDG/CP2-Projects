@@ -5,7 +5,7 @@ import csv
 print("\nHello! I am the movie recommender.")
 
 def main(movies):
-    
+
     filters = []
 
     choice = input("\nWhat would you like to do?\n1 = Get Movie Reccomendations\n2 = Display All Movies\n3 = Exit\n")
@@ -65,17 +65,17 @@ def main(movies):
                 print("\nINVALID CHOICE\n\nPlease try again.")
                 main(movies)
 
-            filtersCopy = filters
+        #filtersCopy = filters
 
-            for row in movies:
-                for item in row:
-                    for criteria in filtersCopy:
-                        if criteria == item:
-                            filtersCopy.remove(criteria)
-                print(filtersCopy)
-                if filtersCopy == filtersCopy.clear():
-                    print("\n" + row[0] + " | Director: " + row[1] + " | Genre: " + row[2] + " | Rating: " + row[3] + " | Length(minutes): " + row[4] + " | Notable Actors: " + row[5])
-                filtersCopy = filters
+        #for row in movies:
+            #for item in row:
+                #for i in filters:
+                    #if i in item:
+                        #filtersCopy.remove(i)
+            #if filtersCopy == []:
+                #print("\n" + row[0] + " | Director: " + row[1] + " | Genre: " + row[2] + " | Rating: " + row[3] + " | Length(minutes): " + row[4] + " | Notable Actors: " + row[5])
+            #filtersCopy = filters
+
 
     elif choice == 2:
         for row in movies:
