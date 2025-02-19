@@ -65,17 +65,15 @@ def main(movies):
                 print("\nINVALID CHOICE\n\nPlease try again.")
                 main(movies)
 
-        #filtersCopy = filters
-
-        #for row in movies:
-            #for item in row:
-                #for i in filters:
-                    #if i in item:
-                        #filtersCopy.remove(i)
-            #if filtersCopy == []:
-                #print("\n" + row[0] + " | Director: " + row[1] + " | Genre: " + row[2] + " | Rating: " + row[3] + " | Length(minutes): " + row[4] + " | Notable Actors: " + row[5])
-            #filtersCopy = filters
-
+        filtersCopy = filters.copy()
+        for row in movies:
+            for item in row:
+                for i in filters:
+                    if i in item:
+                        filtersCopy.remove(i)
+            if filtersCopy == []:
+                print("\n" + row[0] + " | Director: " + row[1] + " | Genre: " + row[2] + " | Rating: " + row[3] + " | Length(minutes): " + row[4] + " | Notable Actors: " + row[5])
+            filtersCopy = filters.copy()
 
     elif choice == 2:
         for row in movies:
