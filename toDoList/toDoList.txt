@@ -1,4 +1,2 @@
-Eat
+
 Sleep
-Die
-Completed: Eat

@@ -3,7 +3,7 @@
 print("\nHello! I am a to-do list program.")
 
 with open("toDoList/toDoList.txt", "w+") as toDoList:
-    toDoList.write("")
+    toDoList.write("\n")
 
 def main():
 
@@ -26,6 +26,8 @@ def main():
         with open("toDoList/toDoList.txt", "a+") as toDoList:
             toDoList.write(itemToAdd + "\n")
 
+        print("\nDone")
+
     if choice == 2:
         with open("toDoList/toDoList.txt", "r+") as toDoList:
             itemDone = input("\nWhich item on your list would you like to mark as completed?\n")
@@ -38,7 +40,7 @@ def main():
                         lines = f.readlines()
                     with open("toDoList/toDoList.txt", "w") as f:
                         for line in lines:
-                            if line.strip("\n") != x:
+                            if line.strip("") != x:
                                 f.write(line)
                     toDoList.write(newLine)
                     marked = True
@@ -58,7 +60,7 @@ def main():
                         lines = f.readlines()
                     with open("toDoList/toDoList.txt", "w") as f:
                         for line in lines:
-                            if line.strip("\n") != x:
+                            if line.strip("") != x:
                                 f.write(line)
                     removed = True
             if removed == False:
