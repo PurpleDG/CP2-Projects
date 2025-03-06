@@ -1,0 +1,2 @@
+name, attack, defense, speed, level, HP, if character is saved
+Training Dummy, 0, 0, 0, 0, 1000000000, True
