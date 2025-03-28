@@ -2,6 +2,8 @@
 
 import csv
 
+from keepRunning import keepRunning
+
 #Introduce the program to the user:
 print("\nHello! I am the coin change program. I can take a money amount and tell you what dollars and coins you need to distribute the money into the least amount of dollars and coins possible.")
 
@@ -22,28 +24,6 @@ def main():
     def coinChange(country, money, rownum):
 
         print("\nThe country is ", country, ", and the amount of money to be coin changed is ", money, ".")
-
-        #Function to ask the user if they want to keep using the program:
-        def keepRunning():
-
-            #Ask the user if they want to keep using the program:
-            keepUsing = input("\nDo you want to keep using the program? (y/n)\n")
-
-            #If the user says yes:
-            if keepUsing == "y":
-                main()
-
-            #If the user says no:
-            elif keepUsing == "n":
-                print("\nThank you! Goodbye!\n")
-                exit()
-
-            #If the user does not input a valid action:
-            else:
-
-                #Tell the user they did not input a valid action and let them try again:
-                print("\nINVALID OPTION\n\nPlease try again.")
-                keepRunning()
 
         #Do the coin change thing:
 
