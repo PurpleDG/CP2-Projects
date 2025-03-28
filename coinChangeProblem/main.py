@@ -9,7 +9,7 @@ print("\nHello! I am the coin change program. I can take a money amount and tell
 def main():
 
     #Ask the user what country they want to coin change money from:
-    country = input("\nWhat country do you want to coin change money from?\n1. America\n2. Japan\n3. France\n")
+    country = input("\nWhat country do you want to coin change money from?\n1. America\n2. Japan\n3. France\n4. Brazil\n")
 
     #Make sure that the user entered a number:
     try:
@@ -47,7 +47,7 @@ def main():
 
         #Do the coin change thing:
 
-        print("\nYou will need:")
+        print("\nYou will need:\n")
 
         with open("coinChangeProblem\coinDenominations.csv") as file:
 
@@ -103,20 +103,26 @@ def main():
     #If the user picked America:
     if country == 1:
         
-        #Run the coin change function after asking the user how much money they want to coin change:
+        #Run the coin change function for America after asking the user how much money they want to coin change:
         coinChange("America", howMuchMoney("America"), 25)
 
     #If the user picked Japan:
     elif country == 2:
         
-        #Run the coin change function after asking the user how much money they want to coin change:
+        #Run the coin change function for Japan after asking the user how much money they want to coin change:
         coinChange("Japan", howMuchMoney("Japan"), 19)
 
     #If the user picked France:
     elif country == 3:
 
-        #Run the coin change function after asking the user how much money they want to coin change:
+        #Run the coin change function for France after asking the user how much money they want to coin change:
         coinChange("France", howMuchMoney("France"), 31)
+
+    #If the user picked Brazil:
+    elif country == 4:
+
+        #Run the coin change function for Brazil after asking the user how much money they want to coin change:
+        coinChange("Brazil", howMuchMoney("Brazil"), 27)
 
     #If the user did not pick a valid option
     else:
