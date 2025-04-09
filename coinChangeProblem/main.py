@@ -29,7 +29,7 @@ def main():
 
         print("\nYou will need:\n")
 
-        with open("coinChangeProblem\coinDenominations.csv") as file:
+        with open("CP2-Projects\coinChangeProblem\coinDenominations.csv") as file:
 
             coins = csv.reader(file)
 
@@ -49,6 +49,7 @@ def main():
 
         #Ask the user if they want to keep using the program:
         keepRunning()
+        main()
 
     #Function to ask the user how much money they want to coin change:
     def howMuchMoney(country):

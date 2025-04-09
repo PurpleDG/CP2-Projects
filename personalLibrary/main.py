@@ -9,7 +9,6 @@ music = []
 #Function to add an item to the music list:
 def addItem():
 
-<<<<<<< HEAD
     #Ask the user what song they want to add:
     title = input("\nWhat is the name of the song you would like to add?\n")
 
@@ -28,26 +27,6 @@ def addItem():
         "artist": artist,
         "length": length,
         "genre": genre
-=======
-    #Ask the user what the title of the song they want to add is:
-    title = input("\nWhat is the title of the song you want to add?\n")
-    
-    #Ask the user who the artist of the song they want to add is:
-    artist = input("\nWho is the artist of the song?\n")
-
-    #Ask the user what the genre of the song they want to add is:
-    genre = input("\nWhat genre is the song?\n")
-
-    #Ask the user how long the song is:
-    length = input("\nHow long is the song? (minutes:seconds)\n")
-
-    #Create the song variable with the details from the user:
-    song = {
-        "title": title,
-        "artist": artist,
-        "genre": genre,
-        "length": length
->>>>>>> 0f2a111c76a58e0f690b3fc98646581752fef724
     }
 
     #Add the song to the music list:
@@ -59,13 +38,8 @@ def addItem():
 #Function for the user to search for a song or songs written by a certain artist:
 def search():
 
-<<<<<<< HEAD
     #Ask the user if they want to search for a certain song, or songs by a certain artist:
     choice = input("\nWhat would you like to search for songs by?\nt = title\na = artist\nl = length\ng = genre\n")
-=======
-    #Ask the user what criteria they want to search by:
-    choice = input("\nBy what criteria would you like to search for songs?\nt = title\na = artist\ng = genre\nl = length\n")
->>>>>>> 0f2a111c76a58e0f690b3fc98646581752fef724
     
     #If the user chooses to search by title::
     if choice.upper() == "T":
