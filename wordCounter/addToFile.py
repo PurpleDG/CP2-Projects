@@ -35,9 +35,15 @@ def update(path, time):
     try:
         with open(path, "a+") as file:
 
+            # Move the file pointer to the start of the file:
+            file.seek(0)
+
             #Save the amount of words in the file as a variable:
-            fileContents = file.read()
-            wordCount = fileContents.split()
+            wordCount = 0
+            for line in file:
+                separated = line.split()
+                lineCount = len(separated)
+                wordCount += lineCount
 
             #Update the user's desired file with a word count and "date updated":
             file.write("\nUPDATE: word count = " + str(wordCount) + ", date/time updated = " + str(time))
