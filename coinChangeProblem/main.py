@@ -23,13 +23,11 @@ def main():
     #Inner function to perform a coin change:
     def coinChange(country, money, rownum):
 
-        print("\nThe country is ", country, ", and the amount of money to be coin changed is ", money, ".")
-
         #Do the coin change thing:
 
         print("\nYou will need:\n")
 
-        with open("CP2-Projects\coinChangeProblem\coinDenominations.csv") as file:
+        with open("coinChangeProblem\coinDenominations.csv") as file:
 
             coins = csv.reader(file)
 
