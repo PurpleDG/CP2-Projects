@@ -215,26 +215,29 @@ def main(movies):
 keepGoing = True
 
 #While the variable to keep the program running is true:
-while keepGoing == True:
+def runProgram(keepGoing):
+    while keepGoing == True:
 
-    #With the file open:
-    with open("movieRecommender\movies.csv") as file:
+        #With the file open:
+        with open("movieRecommender\movies.csv") as file:
 
-        #Set the movies variable equal to the contents of the file:
-        movies = csv.reader(file)
+            #Set the movies variable equal to the contents of the file:
+            movies = csv.reader(file)
 
-        # Remove the first line(it's just a guide):
-        next(movies)
+            # Remove the first line(it's just a guide):
+            next(movies)
 
-        #Run the main function of the program:
-        main(movies)
-        #Ask the user if they want to keep the program running:
-        yn = input("\nWould you like to keep using the program?\n1 = yes\n2 = no\n")
-        #If the user chooses yes:
-        if yn == "1":
-            #Keep the loop going:
-            pass
-        #If the user does not choose yes:
-        else:
-            #Stop the loop(and the program itself) from running:
-            keepGoing = False
+            #Run the main function of the program:
+            main(movies)
+            #Ask the user if they want to keep the program running:
+            yn = input("\nWould you like to keep using the program?\n1 = yes\n2 = no\n")
+            #If the user chooses yes:
+            if yn == "1":
+                #Keep the loop going:
+                pass
+            #If the user does not choose yes:
+            else:
+                #Stop the loop(and the program itself) from running:
+                keepGoing = False
+
+runProgram(keepGoing)
