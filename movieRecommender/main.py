@@ -12,7 +12,7 @@ def main(movies):
     filtersChosen = []
 
     #Ask the user if they want to get movie reccomendations, display every movie, or exit the program:
-    option = input("\nWhat would you like to do?\n1 = Get Movie Reccomendations\n2 = Display All Movies\n3 = Exit\n")
+    option = input("\nWhat would you like to do?\n1 = Get Movie Reccomendations\n2 = Display All Movies\n3 = Exit Program\n")
 
     #Make sure the user entered a number:
     try:
@@ -204,19 +204,16 @@ def main(movies):
         #Make it look nice:
         print("")
         #Exit:
-        return
+        return "Stop"
 
     #If the user did not choose a valid option:
     else:
         #Tell the user they did not choose a valid option:
         print("\nINVALID CHOICE\n\nPlease try again.")
 
-#Make a variable to keep track of whether or not the user wants to keep using the program:
-keepGoing = True
-
-#While the variable to keep the program running is true:
-def runProgram(keepGoing):
-    while keepGoing == True:
+#Function to run the program:
+def runProgram():
+    while True:
 
         #With the file open:
         with open("movieRecommender\movies.csv") as file:
@@ -227,17 +224,8 @@ def runProgram(keepGoing):
             # Remove the first line(it's just a guide):
             next(movies)
 
-            #Run the main function of the program:
-            main(movies)
-            #Ask the user if they want to keep the program running:
-            yn = input("\nWould you like to keep using the program?\n1 = yes\n2 = no\n")
-            #If the user chooses yes:
-            if yn == "1":
-                #Keep the loop going:
-                pass
-            #If the user does not choose yes:
-            else:
-                #Stop the loop(and the program itself) from running:
-                keepGoing = False
+            #Run the main function of the program and check if the program should keep running:
+            if main(movies) == "Stop":
+                exit()
 
-runProgram(keepGoing)
+runProgram()
