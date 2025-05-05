@@ -28,7 +28,6 @@ def main():
         print("\nYou will need:\n")
 
         with open("coinChangeProblem\coinDenominations.csv") as file:
-
             coins = csv.reader(file)
 
             for row in coins:

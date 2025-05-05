@@ -132,8 +132,8 @@ def main():
     #If the user chose to exit the program:
     if choice == 5:
 
-        #Make a new line because it looks nice:
-        print("")
+        #Make it look nice:
+        print("\nBye-bye!\n")
 
         #Exit the program:
         exit()

@@ -73,11 +73,23 @@ def again():
         #Run the program again:
         main()
 
-    #If the user does not choose yes:
+    #If the user chooses no:
+    elif choice == "2":
+
+        #Make it look nice:
+        print("\nBye-bye!\n")
+
+        #Stop the program from running:
+        exit()
+
+    #If the user does not choose yes or no:
     else:
 
-        #Stop the program(and add a line 'cause it looks nice):
-        print("")
+        #Tell the user that they did not pick a valid option:
+        print("\nINVALID OPTION\n\nPlease try again.")
+
+        #Let the user try again:
+        again()
 
 #Main function to run the program:
 def main():
@@ -103,14 +115,23 @@ def main():
         #Find out if the user wants to translate further:
         again()     
 
-    #If the user does not choose to teranslate English into morse code or to translate morse code into English:
-    else:
+    #If the user chooses to exit the program:
+    elif choice == "3":
 
-        #Print a new line to make it look nice:
-        print("")
+        #Make it look nice:
+        print("\nBye-bye!\n")
 
         #Stop the program from running:
         exit()
+
+    #If the user does not choose a valid option:
+    else:
+
+        #Tell the user that they did not choose a valid option:
+        print("\nINVALID OPTION\n\nPlease try again.")
+
+        #Let the user try again:
+        main()
 
 #Start the program:
 main()

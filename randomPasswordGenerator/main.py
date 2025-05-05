@@ -88,7 +88,7 @@ def lower(num, options, optionsPicked, password):
 def numbas(num, options, optionsPicked, password):
     
     #Ask the user if they want to include numbers in their passwords:
-    yn = input("\nWould you like to include numbers letters in your password? (y = yes, n = no)\n")
+    yn = input("\nWould you like to include numbers in your password? (y = yes, n = no)\n")
 
     #If the user chose yes:
     if yn.upper() == "Y":
@@ -128,7 +128,7 @@ def special(num, options, optionsPicked, password):
         print("\nSpecial characters will not be included in your password.")
 
     #Make the outputted passwords shown to the users flow naturally:
-    print("/nHere are some password options with those characteristics:\n")
+    print("\nHere are some password options with those characteristics:")
     #Move to the next step of the process:
     assemble(num, options, optionsPicked, password)
 
@@ -159,6 +159,8 @@ def assemble(num, options, optionsPicked, password):
 
     #If the user does not choose yes:
     else:
+        #Make stuff look nice:
+        print("\nBye-bye!\n")
         #End the program:
         pass
 
