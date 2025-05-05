@@ -2,7 +2,7 @@
 
 import csv
 
-from keepRunning import keepRunning
+from coinChangeProblem.keepRunning import keepRunning
 
 #Introduce the program to the user:
 print("\nHello! I am the coin change program. I can take a money amount and tell you what dollars and coins you need to distribute the money into the least amount of dollars and coins possible.")
